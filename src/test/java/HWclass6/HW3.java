@@ -1,7 +1,16 @@
 package HWclass6;
 
-public class HW3 {
-    public static void main(String[] args) {
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
+public class HW3 {
+    /*
+     public static void selectFromDropdownS(WebElement element, String selectString){
+        Select selectByS = new Select(element);
+        selectByS.selectByVisibleText(selectString);
+        selectByS.selectByValue(selectString);
     }
+(code also in common methods)
+    }
+*/
 }

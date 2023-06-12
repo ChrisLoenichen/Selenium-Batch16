@@ -1,11 +1,16 @@
 package utils;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
@@ -46,5 +51,17 @@ public class CommonMethods {
         Select selectByS = new Select(element);
         selectByS.selectByVisibleText(selectString);
         selectByS.selectByValue(selectString);
+    }
+
+    public static void takeScreenShot(String fileName) {
+        TakesScreenshot ts = (TakesScreenshot) driver;
+
+        File screenShot = ts.getScreenshotAs(OutputType.FILE);
+
+        try{
+            FileUtils.copyFile(screenShot,new File("C:\\Users\\clee1\\IdeaProjects\\syntaxSdetBatch16Basic"));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

@@ -12,6 +12,8 @@ public class iFrames extends CommonMethods {
         String browser = "chrome";
         navigateToURL(url,browser);
 
+
+
         //task1 print Babycat cat on screen
         //and select Babycat from drop down
 
